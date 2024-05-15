@@ -1,0 +1,115 @@
+---
+import { Icon } from "astro-icon";
+
+const infoLinks = [
+  {
+    title: "Contributors",
+    link: "/",
+  },
+  {
+    title: "Roadmap",
+    link: "/",
+  },
+];
+const socialLinks = [
+  {
+    title: "Telegram",
+    link: "https://t.me/BasedMenCTO",
+  },
+  {
+    title: "Twitter",
+    link: "https://x.com/CubeAlgos",
+  },
+  {
+    title: "GitHub",
+    link: "https://github.com/kevinformatik",
+  },
+];
+const iconLinks = [
+  {
+    icon: "simple-icons:telegram",
+    link: "https://t.me/BasedMenCTO",
+  },
+  {
+    icon: "mdi:twitter",
+    link: "https://x.com/BasedMenCTO",
+  },
+  {
+    icon: "mdi:github",
+    link: "https://github.com/kevinformatik",
+  },
+];
+---
+
+<footer class="bg-blue-400 z-50" aria-labelledby="footer-heading">
+  <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+      <div class="grid grid-cols-3 gap-8 xl:col-span-2">
+        <div>
+          <h3 class="text-base font-bold text-slate-950">Sitemap</h3>
+          <ul role="list" class="mt-4 space-y-4">
+            {
+              infoLinks.map((item) => (
+                <li>
+                  <a
+                    href={item["link"]}
+                    class="text-base text-slate-900 hover:text-slate-700"
+                  >
+                    {item["title"]}{" "}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-slate-950">Socials</h3>
+          <ul role="list" class="mt-4 space-y-4">
+            {
+              socialLinks.map((item) => (
+                <li>
+                  <a
+                    href={item["link"]}
+                    class="text-base text-slate-900 hover:text-slate-700"
+                  >
+                    {item["title"]}{" "}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-8 border-t border-slate-950 pt-8 md:flex md:items-center md:justify-between"
+    >
+      <div class="flex space-x-6 md:order-2">
+        {
+          iconLinks.map((item) => (
+            <a href={item["link"]} class="text-slate-950">
+              <span class="sr-only"> </span>
+              <Icon
+                name={item["icon"]}
+                class="h-6 w-6 text-xl text-slate-900 hover:text-slate-700"
+                aria-hidden="true"
+              />
+            </a>
+          ))
+        }
+      </div>
+      <div>
+        <a href="/" class="mt-8 text-base text-slate-900 md:order-1 md:mt-0">
+          BasedMen
+        </a>
+        <span class="font-bold">X</span>
+        <a
+          href="https://cubealgos.org"
+          class="mt-8 text-base text-slate-900 md:order-1 md:mt-0"
+        >
+          CubeAlgos
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
