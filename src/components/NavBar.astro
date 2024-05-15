@@ -1,16 +1,5 @@
 ---
 import { LanguageSelector } from "astro-i18next/components";
-
-const destinations = [
-  {
-    name: "Roadmap",
-    link: "/",
-  },
-  {
-    name: "Contributors",
-    link: "/",
-  },
-];
 ---
 
 <header class="bg-white sticky top-0 z-50">
@@ -25,19 +14,6 @@ const destinations = [
       </a>
     </div>
     <div class="nav-links static min-h-fit bg-white left-0 w-full flex px-5">
-      <ul class="flex flex-rowmitems-center gap-[1vw]">
-        {
-          destinations.map((props) => {
-            return (
-              <li>
-                <a class="text-slate-900 hover:text-blue-400" href={props.link}>
-                  {props.name}
-                </a>
-              </li>
-            );
-          })
-        }
-      </ul>
     </div>
     <LanguageSelector class="bg-white-100 text-slate-900 p-2" showFlag={true} />
   </nav>
