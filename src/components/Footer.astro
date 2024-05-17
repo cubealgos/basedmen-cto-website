@@ -1,16 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 
-const infoLinks = [
-  {
-    title: "Contributors",
-    link: "/",
-  },
-  {
-    title: "Roadmap",
-    link: "/",
-  },
-];
+const infoLinks = [];
 const socialLinks = [
   {
     title: "Telegram",
@@ -45,8 +36,8 @@ const iconLinks = [
   <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
     <div class="xl:grid xl:grid-cols-3 xl:gap-8">
       <div class="grid grid-cols-3 gap-8 xl:col-span-2">
-        <div>
-          <h3 class="text-base font-bold text-slate-950">Sitemap</h3>
+        <!-- <div>
+          <h3 class="text-base font-bold text-slate-950">Info</h3>
           <ul role="list" class="mt-4 space-y-4">
             {
               infoLinks.map((item) => (
@@ -61,7 +52,7 @@ const iconLinks = [
               ))
             }
           </ul>
-        </div>
+        </div> -->
         <div>
           <h3 class="text-base font-bold text-slate-950">Socials</h3>
           <ul role="list" class="mt-4 space-y-4">
